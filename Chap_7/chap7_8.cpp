@@ -4,14 +4,14 @@
 
 using namespace std;
 
-const size_t row = 2;
-const size_t column = 3;
+const size_t ROW = 2;
+const size_t COLUMN = 3;
 
-void printArray(const array<array<int, column>, row> &a)
+void print2DArray(const array<array<int, COLUMN>, ROW> &a)
 {
-    for (auto const &row : a)
+    for (auto const &ROW : a)
     {
-        for (auto const &element : row)
+        for (auto const &element : ROW)
         {
             std::cout << element << '\t';
         }
@@ -21,7 +21,7 @@ void printArray(const array<array<int, column>, row> &a)
 
 void demo1DArray()
 {
-    std::cout << "Print Normal Array Object: " << std::endl;
+    std::cout << "Print 1D Array Object: " << std::endl;
     const size_t arraySize = 7;
     array<int, arraySize> array1 = {1, 2, 3, 4, 5, 6, 7};
     for (int item : array1)
@@ -33,8 +33,8 @@ void demo1DArray()
 void demo2DArray()
 {
     std::cout << "Prinrt 2D Array Object: " << std::endl;
-    array<array<int, column>, row> array2 = {1, 2, 3, 4, 5, 6};
-    printArray(array2);
+    array<array<int, COLUMN>, ROW> array2 = {1, 2, 3, 4, 5, 6};
+    print2DArray(array2);
 }
 
 int main()
